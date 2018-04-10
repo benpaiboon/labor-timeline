@@ -2,28 +2,20 @@ var currentDate = new Date();
 var currentYear = currentDate.getFullYear();
 
 var start = new Date(`${currentYear} 09:00`);
-var end = new Date(`${currentYear} 11:00`);
-// var oneMin = new Date(`${currentYear} 00:01`);
+var end = new Date(`${currentYear} 09:10`);
 
-var total = new Date(end - start);
-var minLoop = total.getMinutes();
+var diffHours = end.getHours() - start.getHours();
+var diffMins = end.getMinutes() - start.getMinutes();
 
+var totalDiffTime = (diffHours * 60) + diffMins;
+var timelines = [];
 
-if (minLoop == 0) {
- minLoop = 60;
-}
-else {
- minLoop = total.getMinutes();
-}
-
-
-var timeLine = [];
-
-for (var i = 0; i < minLoop; i++) {
- var timeRange = `${start.getHours()}:${start.getMinutes() + i}`;
- // console.log(`${start.getHours()}:${start.getMinutes() + i}`);
- timeLine.push(timeRange);
+for (var i = 0; i < totalDiffTime; i++) {
+  var sHour = start.setMinutes(start.getMinutes() + 1);
+  console.log(new Date(sHour).toString());
+  timelines.push(sHour);
 }
 
-console.log(timeLine);
+console.log(timelines);
+
 
