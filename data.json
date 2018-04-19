@@ -1,0 +1,26 @@
+[
+  {
+    "job": "AAA",
+    "jobid": "AAA123",
+    "operation": "A1",
+    "userid": "ben123",
+    "starttime": 1514768400000,
+    "endtime": 1514769000000 
+  },
+  {
+    "job": "AAA",
+    "jobid": "AAA345",
+    "operation": "A2",
+    "userid": "ben123",
+    "starttime": 1514768760000,
+    "endtime": 1514769000000 
+  },
+  {
+    "job": "AAA",
+    "jobid": "AAA678",
+    "operation": "A3",
+    "userid": "ben123",
+    "starttime": 1514768700000,
+    "endtime": 1514769300000 
+  }
+]
